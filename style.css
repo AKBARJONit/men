@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:#ff613d;
+    overflow-x:hidden;
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+}
+
+/* O'ng tomondagi oq fon */
+.container::after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:65%;
+    height:100%;
+    background:#f2f2f2;
+    border-top-left-radius:300px;
+    border-bottom-left-radius:300px;
+    z-index:-1;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:40px 70px;
+}
+
+.logo,
+.level{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-weight:700;
+    color:#16263a;
+}
+
+.line{
+    width:45px;
+    height:3px;
+    background:#111;
+    border-radius:5px;
+}
+
+.dot{
+    width:18px;
+    height:18px;
+    background:#ff613d;
+    border-radius:50%;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px 50px;
+}
+
+.left{
+    width:65%;
+}
+
+.left h1{
+    font-size:80px;
+    color:#fff;
+    margin-bottom:40px;
+    font-weight:800;
+}
+
+.card{
+    background:#f4f4f4;
+    border-radius:25px;
+    padding:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.card ol{
+    width:50%;
+}
+
+.card li{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:18px;
+    color:#1d2d44;
+}
+
+.card strong{
+    font-weight:700;
+}
+
+.preview{
+    width:50%;
+}
+
+.preview img{
+    width:100%;
+    border-radius:25px;
+    display:block;
+}
+
+.right{
+    width:30%;
+    display:flex;
+    justify-content:center;
+}
+
+.right img{
+    width:100%;
+    max-width:450px;
+}
+
+@media(max-width:1100px){
+
+    .hero{
+        flex-direction:column;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+
+    .card{
+        flex-direction:column;
+    }
+
+    .card ol,
+    .preview{
+        width:100%;
+    }
+
+    .left h1{
+        font-size:55px;
+    }
+
+    .container::after{
+        width:100%;
+        border-radius:0;
+    }
+}
